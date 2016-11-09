@@ -68,15 +68,15 @@
 <div class="flex-center position-ref full-height">
 
     <div class="content">
-        @unless (empty($articles))
+        @unless (empty($news))
             There are some articles.
         @endunless
-        @if (empty($articles))
+        @if (empty($news))
             There are no news!
         @else
             Something else here.
         @endif
-        @foreach ($articles as $article)
+        @foreach ($news as $article)
             <li>{{ $article }}</li>
         @endforeach
         <div class="title m-b-md">

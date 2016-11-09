@@ -11,11 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    $news=["One news","Second news","Third news"];
-    return view('pages.about')->with('articles',$news);
-});
+Route::get('/', 'PagesController@home');
 
-Route::get('about',function (){
-    return view('pages.about');
-});
+Route::get('about', 'PagesController@about');
+
