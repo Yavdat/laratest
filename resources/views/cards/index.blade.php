@@ -3,7 +3,10 @@
 @section('content')
     <h1>All Cards</h1>
     @foreach($cards as $card)
-        <div>{{$card->title}}</div>
+        <div>
+            <a href="/cards/{{ $card->id }}">{{$card->title}}</a>
+            {{--cards/{{$card->path()}}--}}
+        </div>
     @endforeach
 
 @stop
